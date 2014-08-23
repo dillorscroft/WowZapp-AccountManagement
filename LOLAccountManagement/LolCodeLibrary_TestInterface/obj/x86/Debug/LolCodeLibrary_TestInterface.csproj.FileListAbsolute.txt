@@ -1,0 +1,8 @@
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LolCodeLibrary_TestInterface\bin\Debug\LolCodeLibrary_TestInterface.exe.config
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LolCodeLibrary_TestInterface\bin\Debug\LolCodeLibrary_TestInterface.exe
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LolCodeLibrary_TestInterface\bin\Debug\LolCodeLibrary_TestInterface.pdb
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LolCodeLibrary_TestInterface\bin\Debug\LOLCodeLibrary.dll
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LolCodeLibrary_TestInterface\bin\Debug\LOLCodeLibrary.pdb
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LolCodeLibrary_TestInterface\obj\x86\Debug\LolCodeLibrary_TestInterface.csprojResolveAssemblyReference.cache
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LolCodeLibrary_TestInterface\obj\x86\Debug\LolCodeLibrary_TestInterface.exe
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LolCodeLibrary_TestInterface\obj\x86\Debug\LolCodeLibrary_TestInterface.pdb

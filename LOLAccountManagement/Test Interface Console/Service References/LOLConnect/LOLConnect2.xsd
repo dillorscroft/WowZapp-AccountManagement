@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/LOLAccountManagement" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LOLAccountManagement" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://accounts.laffoutloudapp.com/LOLConnect.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="DeviceOAuth.OAuthTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LOL" />
+      <xs:enumeration value="FaceBook" />
+      <xs:enumeration value="Google" />
+      <xs:enumeration value="YouTube" />
+      <xs:enumeration value="LinkedIn" />
+      <xs:enumeration value="Twitter" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DeviceOAuth.OAuthTypes" nillable="true" type="tns:DeviceOAuth.OAuthTypes" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AccountID" type="ser:guid" />
+      <xs:element minOccurs="0" name="DateOfBirth" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfGeneral.Error" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Picture" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="ArrayOfGeneral.Error">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="General.Error" type="tns:General.Error" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGeneral.Error" nillable="true" type="tns:ArrayOfGeneral.Error" />
+  <xs:complexType name="General.Error">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorTitle" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="General.Error" nillable="true" type="tns:General.Error" />
+  <xs:simpleType name="Device.DeviceTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Other" />
+      <xs:enumeration value="iOS" />
+      <xs:enumeration value="Android" />
+      <xs:enumeration value="Windows" />
+      <xs:enumeration value="OSX" />
+      <xs:enumeration value="XBOX360" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Device.DeviceTypes" nillable="true" type="tns:Device.DeviceTypes" />
+  <xs:complexType name="DeviceOAuth">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeviceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfGeneral.Error" />
+      <xs:element minOccurs="0" name="OAuthID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OAuthToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OAuthType" type="tns:DeviceOAuth.OAuthTypes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeviceOAuth" nillable="true" type="tns:DeviceOAuth" />
+  <xs:complexType name="ArrayOfUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUser" nillable="true" type="tns:ArrayOfUser" />
+  <xs:complexType name="Contact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContactAccountID" type="ser:guid" />
+      <xs:element minOccurs="0" name="ContactID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfGeneral.Error" />
+      <xs:element minOccurs="0" name="OwnerAccountID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Contact" nillable="true" type="tns:Contact" />
+</xs:schema>

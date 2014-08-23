@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LOLAccountManagement" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LOLAccountManagement" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:6082/LOLConnect.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfBlankDataAccess">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BlankDataAccess" nillable="true" type="tns:BlankDataAccess" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBlankDataAccess" nillable="true" type="tns:ArrayOfBlankDataAccess" />
+  <xs:complexType name="BlankDataAccess">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BlankData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BlankID" type="xs:int" />
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfGeneral.Error" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BlankDataAccess" nillable="true" type="tns:BlankDataAccess" />
+  <xs:complexType name="ArrayOfGeneral.Error">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="General.Error" type="tns:General.Error" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGeneral.Error" nillable="true" type="tns:ArrayOfGeneral.Error" />
+  <xs:complexType name="General.Error">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorTitle" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="General.Error" nillable="true" type="tns:General.Error" />
+</xs:schema>

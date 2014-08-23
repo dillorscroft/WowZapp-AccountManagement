@@ -1,0 +1,4 @@
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LOLCodeLibrary\bin\Debug\LOLCodeLibrary.dll
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LOLCodeLibrary\bin\Debug\LOLCodeLibrary.pdb
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LOLCodeLibrary\obj\x86\Debug\LOLCodeLibrary.dll
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LOLCodeLibrary\obj\x86\Debug\LOLCodeLibrary.pdb

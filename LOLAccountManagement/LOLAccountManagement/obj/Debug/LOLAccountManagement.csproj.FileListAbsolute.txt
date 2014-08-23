@@ -1,0 +1,13 @@
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LOLAccountManagement\bin\LOLAccountManagement.dll
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LOLAccountManagement\bin\LOLAccountManagement.pdb
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LOLAccountManagement\bin\LOLCodeLibrary.dll
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LOLAccountManagement\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LOLAccountManagement\bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LOLAccountManagement\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LOLAccountManagement\bin\Microsoft.Practices.Unity.dll
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LOLAccountManagement\bin\Microsoft.Practices.Unity.Interception.dll
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LOLAccountManagement\bin\RazorEngine.dll
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LOLAccountManagement\bin\LOLCodeLibrary.pdb
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LOLAccountManagement\obj\Debug\LOLAccountManagement.csprojResolveAssemblyReference.cache
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LOLAccountManagement\obj\Debug\LOLAccountManagement.dll
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\LOLAccountManagement\obj\Debug\LOLAccountManagement.pdb

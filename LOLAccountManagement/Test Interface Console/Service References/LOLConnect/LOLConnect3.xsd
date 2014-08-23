@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/LOLAccountManagement" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LOLAccountManagement" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:6082/LOLConnect.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:6082/LOLConnect.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LOLCodeLibrary.ErrorsManagement" />
+  <xs:import schemaLocation="http://localhost:6082/LOLConnect.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:simpleType name="Device.DeviceTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Other" />
+      <xs:enumeration value="iOS" />
+      <xs:enumeration value="Android" />
+      <xs:enumeration value="Windows" />
+      <xs:enumeration value="OSX" />
+      <xs:enumeration value="XBOX360" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Device.DeviceTypes" nillable="true" type="tns:Device.DeviceTypes" />
+  <xs:simpleType name="AccountOAuth.OAuthTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LOL" />
+      <xs:enumeration value="FaceBook" />
+      <xs:enumeration value="Google" />
+      <xs:enumeration value="YouTube" />
+      <xs:enumeration value="LinkedIn" />
+      <xs:enumeration value="Twitter" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AccountOAuth.OAuthTypes" nillable="true" type="tns:AccountOAuth.OAuthTypes" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AccountID" type="ser:guid" />
+      <xs:element minOccurs="0" name="DateOfBirth" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfGeneral.Error" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasProfileImage" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Picture" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="PictureURL" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="ArrayOfGeneral.Error">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="General.Error" type="tns:General.Error" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGeneral.Error" nillable="true" type="tns:ArrayOfGeneral.Error" />
+  <xs:complexType name="General.Error">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorTitle" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LOLCodeLibrary.ErrorsManagement" minOccurs="0" name="ErrorType" type="q1:SystemTypes.ErrorMessage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="General.Error" nillable="true" type="tns:General.Error" />
+  <xs:complexType name="AccountOAuth">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfGeneral.Error" />
+      <xs:element minOccurs="0" name="OAuthID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OAuthToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OAuthType" type="tns:AccountOAuth.OAuthTypes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AccountOAuth" nillable="true" type="tns:AccountOAuth" />
+  <xs:complexType name="LOLConnect.ContactUpdate">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DeletedContacts" nillable="true" type="q2:ArrayOfguid" />
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfGeneral.Error" />
+      <xs:element minOccurs="0" name="UpdatedContacts" nillable="true" type="tns:ArrayOfContact" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LOLConnect.ContactUpdate" nillable="true" type="tns:LOLConnect.ContactUpdate" />
+  <xs:complexType name="ArrayOfContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contact" nillable="true" type="tns:Contact" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContact" nillable="true" type="tns:ArrayOfContact" />
+  <xs:complexType name="Contact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Blocked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ContactAccountID" type="ser:guid" />
+      <xs:element minOccurs="0" name="ContactID" type="ser:guid" />
+      <xs:element minOccurs="0" name="ContactOAuths" nillable="true" type="tns:ArrayOfContact.ContactOAuth" />
+      <xs:element minOccurs="0" name="ContactUser" nillable="true" type="tns:User" />
+      <xs:element minOccurs="0" name="DateCreated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateLastUpdated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfGeneral.Error" />
+      <xs:element minOccurs="0" name="OwnerAccountID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Contact" nillable="true" type="tns:Contact" />
+  <xs:complexType name="ArrayOfContact.ContactOAuth">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contact.ContactOAuth" type="tns:Contact.ContactOAuth" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContact.ContactOAuth" nillable="true" type="tns:ArrayOfContact.ContactOAuth" />
+  <xs:complexType name="Contact.ContactOAuth">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OAuthID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OAuthType" type="tns:AccountOAuth.OAuthTypes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Contact.ContactOAuth" nillable="true" type="tns:Contact.ContactOAuth" />
+  <xs:complexType name="ArrayOfLOLConnect.SearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LOLConnect.SearchCriteria" type="tns:LOLConnect.SearchCriteria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLOLConnect.SearchCriteria" nillable="true" type="tns:ArrayOfLOLConnect.SearchCriteria" />
+  <xs:complexType name="LOLConnect.SearchCriteria">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OAuthID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OAuthType" type="tns:AccountOAuth.OAuthTypes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LOLConnect.SearchCriteria" nillable="true" type="tns:LOLConnect.SearchCriteria" />
+  <xs:complexType name="ArrayOfLOLConnect.SearchResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LOLConnect.SearchResult" type="tns:LOLConnect.SearchResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLOLConnect.SearchResult" nillable="true" type="tns:ArrayOfLOLConnect.SearchResult" />
+  <xs:complexType name="LOLConnect.SearchResult">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContactUser" nillable="true" type="tns:User" />
+      <xs:element minOccurs="0" name="SearchedCriteria" type="tns:LOLConnect.SearchCriteria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LOLConnect.SearchResult" nillable="true" type="tns:LOLConnect.SearchResult" />
+  <xs:complexType name="ArrayOfLOLConnect.InviteEmail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LOLConnect.InviteEmail" type="tns:LOLConnect.InviteEmail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLOLConnect.InviteEmail" nillable="true" type="tns:ArrayOfLOLConnect.InviteEmail" />
+  <xs:complexType name="LOLConnect.InviteEmail">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OAuthType" type="tns:AccountOAuth.OAuthTypes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LOLConnect.InviteEmail" nillable="true" type="tns:LOLConnect.InviteEmail" />
+  <xs:simpleType name="ContentPack.ContentPackType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Comicon">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Comix">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RubberStamp">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Callout">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SoundFX">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Emoticon">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ContentPack.ContentPackType" nillable="true" type="tns:ContentPack.ContentPackType" />
+  <xs:complexType name="ArrayOfContentPack">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContentPack" nillable="true" type="tns:ContentPack" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContentPack" nillable="true" type="tns:ArrayOfContentPack" />
+  <xs:complexType name="ContentPack">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentPackAd" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ContentPackAvailableDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ContentPackDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentPackEndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ContentPackID" type="xs:int" />
+      <xs:element minOccurs="0" name="ContentPackIcon" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ContentPackIsFree" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ContentPackPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ContentPackSaleEndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ContentPackSalePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ContentPackTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentPackTypeID" type="tns:ContentPack.ContentPackType" />
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfGeneral.Error" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContentPack" nillable="true" type="tns:ContentPack" />
+  <xs:simpleType name="ContentPackItem.ItemSize">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Large" />
+      <xs:enumeration value="Medium" />
+      <xs:enumeration value="Small" />
+      <xs:enumeration value="Tiny" />
+      <xs:enumeration value="None" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ContentPackItem.ItemSize" nillable="true" type="tns:ContentPackItem.ItemSize" />
+  <xs:complexType name="ArrayOfContentPackItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContentPackItem" nillable="true" type="tns:ContentPackItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContentPackItem" nillable="true" type="tns:ArrayOfContentPackItem" />
+  <xs:complexType name="ContentPackItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentItemTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentPackData" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ContentPackID" type="xs:int" />
+      <xs:element minOccurs="0" name="ContentPackItemID" type="xs:int" />
+      <xs:element minOccurs="0" name="ContentPackItemIcon" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfGeneral.Error" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContentPackItem" nillable="true" type="tns:ContentPackItem" />
+</xs:schema>

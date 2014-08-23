@@ -1,0 +1,16 @@
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\Test Interface Console\bin\Debug\Test Interface Console.exe.config
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\Test Interface Console\bin\Debug\Test Interface Console.exe
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\Test Interface Console\bin\Debug\Test Interface Console.pdb
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\Test Interface Console\bin\Debug\LOLAccountManagement.dll
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\Test Interface Console\bin\Debug\LOLCodeLibrary.dll
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\Test Interface Console\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\Test Interface Console\bin\Debug\RazorEngine.dll
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\Test Interface Console\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\Test Interface Console\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\Test Interface Console\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\Test Interface Console\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\Test Interface Console\bin\Debug\LOLAccountManagement.pdb
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\Test Interface Console\bin\Debug\LOLCodeLibrary.pdb
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\Test Interface Console\obj\x86\Debug\LOLAccountsManagements_TestInterface.csprojResolveAssemblyReference.cache
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\Test Interface Console\obj\x86\Debug\Test Interface Console.exe
+C:\Development\SatoriIT\LOL Account Management\LOLAccountManagement\Test Interface Console\obj\x86\Debug\Test Interface Console.pdb

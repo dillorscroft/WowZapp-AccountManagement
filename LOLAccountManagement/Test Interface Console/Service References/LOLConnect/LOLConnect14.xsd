@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/LOLAccountManagement.Classes.DtoObjects" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LOLAccountManagement.Classes.DtoObjects" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:6082/LOLConnect.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/LOLAccountManagement.Classes" />
+  <xs:import schemaLocation="http://localhost:6082/LOLConnect.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LOLAccountManagement" />
+  <xs:import schemaLocation="http://localhost:6082/LOLConnect.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ContentPackItemDataDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/LOLAccountManagement.Classes" base="q1:WcfBaseObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ItemData" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ContentPackItemDataDTO" nillable="true" type="tns:ContentPackItemDataDTO" />
+  <xs:complexType name="ContentPackItemListDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/LOLAccountManagement.Classes" base="q2:WcfBaseObject">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/LOLAccountManagement" minOccurs="0" name="contentPackItems" nillable="true" type="q3:ArrayOfContentPackItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ContentPackItemListDTO" nillable="true" type="tns:ContentPackItemListDTO" />
+  <xs:complexType name="UserImageDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/LOLAccountManagement.Classes" base="q4:WcfBaseObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccountID" type="ser:guid" />
+          <xs:element minOccurs="0" name="ImageData" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserImageDTO" nillable="true" type="tns:UserImageDTO" />
+</xs:schema>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://localhost:6082/LOLConnect.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://localhost:6082/LOLConnect.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:6082/LOLConnect.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LOLAccountManagement" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ReliantDataConnect_BlankDataAccessGetByText_InputMessage">
+    <wsdl:part name="parameters" element="BlankDataAccessGetByText" />
+  </wsdl:message>
+  <wsdl:message name="ReliantDataConnect_BlankDataAccessGetByText_OutputMessage">
+    <wsdl:part name="parameters" element="BlankDataAccessGetByTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReliantDataConnect_BlankDataAccessGetSpecific_InputMessage">
+    <wsdl:part name="parameters" element="BlankDataAccessGetSpecific" />
+  </wsdl:message>
+  <wsdl:message name="ReliantDataConnect_BlankDataAccessGetSpecific_OutputMessage">
+    <wsdl:part name="parameters" element="BlankDataAccessGetSpecificResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReliantDataConnect_LookupsSave_InputMessage">
+    <wsdl:part name="parameters" element="LookupsSave" />
+  </wsdl:message>
+  <wsdl:message name="ReliantDataConnect_LookupsSave_OutputMessage">
+    <wsdl:part name="parameters" element="LookupsSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReliantDataConnect_BlankDataAccessDelete_InputMessage">
+    <wsdl:part name="parameters" element="BlankDataAccessDelete" />
+  </wsdl:message>
+  <wsdl:message name="ReliantDataConnect_BlankDataAccessDelete_OutputMessage">
+    <wsdl:part name="parameters" element="BlankDataAccessDeleteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ReliantDataConnect">
+    <wsdl:operation name="BlankDataAccessGetByText">
+      <wsdl:input wsaw:Action="urn:ReliantDataConnect/BlankDataAccessGetByText" message="ReliantDataConnect_BlankDataAccessGetByText_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ReliantDataConnect/BlankDataAccessGetByTextResponse" message="ReliantDataConnect_BlankDataAccessGetByText_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BlankDataAccessGetSpecific">
+      <wsdl:input wsaw:Action="urn:ReliantDataConnect/BlankDataAccessGetSpecific" message="ReliantDataConnect_BlankDataAccessGetSpecific_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ReliantDataConnect/BlankDataAccessGetSpecificResponse" message="ReliantDataConnect_BlankDataAccessGetSpecific_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LookupsSave">
+      <wsdl:input wsaw:Action="urn:ReliantDataConnect/LookupsSave" message="ReliantDataConnect_LookupsSave_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ReliantDataConnect/LookupsSaveResponse" message="ReliantDataConnect_LookupsSave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BlankDataAccessDelete">
+      <wsdl:input wsaw:Action="urn:ReliantDataConnect/BlankDataAccessDelete" message="ReliantDataConnect_BlankDataAccessDelete_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ReliantDataConnect/BlankDataAccessDeleteResponse" message="ReliantDataConnect_BlankDataAccessDelete_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

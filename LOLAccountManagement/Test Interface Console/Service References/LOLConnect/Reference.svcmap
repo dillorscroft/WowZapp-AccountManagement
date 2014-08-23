@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5f52b07b-6290-45b1-acfa-4c586011dea6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:6082/lolconnect.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LOLConnect13.xsd" MetadataType="Schema" ID="e0001a55-bde8-4f4c-9a5e-b0e8614ba474" SourceId="1" SourceUrl="http://localhost:6082/LOLConnect.svc?xsd=xsd4" />
+    <MetadataFile FileName="LOLConnect.xsd" MetadataType="Schema" ID="b861cba8-214c-4a95-b424-38ab00b4dc89" SourceId="1" SourceUrl="http://localhost:6082/LOLConnect.svc?xsd=xsd3" />
+    <MetadataFile FileName="LOLConnect.wsdl" MetadataType="Wsdl" ID="98d64e8a-4647-41bb-8238-f936223d1088" SourceId="1" SourceUrl="http://localhost:6082/LOLConnect.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="LOLConnect31.xsd" MetadataType="Schema" ID="7f859ac7-a127-42ee-9277-d8d5d25f3728" SourceId="1" SourceUrl="http://localhost:6082/LOLConnect.svc?xsd=xsd1" />
+    <MetadataFile FileName="LOLConnect32.xsd" MetadataType="Schema" ID="8923ea59-cc06-495a-8971-0efd6267e0f5" SourceId="1" SourceUrl="http://localhost:6082/LOLConnect.svc?xsd=xsd0" />
+    <MetadataFile FileName="LOLConnect15.xsd" MetadataType="Schema" ID="ba092cd9-1945-4a1e-8db6-c9140e2b59d3" SourceId="1" SourceUrl="http://localhost:6082/LOLConnect.svc?xsd=xsd6" />
+    <MetadataFile FileName="LOLConnect14.xsd" MetadataType="Schema" ID="7b8c7681-0301-4274-a12b-f091d9326d6d" SourceId="1" SourceUrl="http://localhost:6082/LOLConnect.svc?xsd=xsd5" />
+    <MetadataFile FileName="LOLConnect3.xsd" MetadataType="Schema" ID="20550c89-29f9-40e6-bfb5-d1303bdfed6b" SourceId="1" SourceUrl="http://localhost:6082/LOLConnect.svc?xsd=xsd2" />
+    <MetadataFile FileName="LOLConnect.disco" MetadataType="Disco" ID="ae6bd92e-b525-4806-b3e5-cc7697510366" SourceId="1" SourceUrl="http://localhost:6082/LOLConnect.svc?disco" />
+    <MetadataFile FileName="LOLConnect1.wsdl" MetadataType="Wsdl" ID="98f3a276-6a09-4db7-b318-44837786dc84" SourceId="1" SourceUrl="http://localhost:6082/LOLConnect.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

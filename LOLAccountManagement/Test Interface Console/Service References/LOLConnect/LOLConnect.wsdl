@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://localhost:6082/LOLConnect.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://localhost:6082/LOLConnect.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:6082/LOLConnect.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LOLAccountManagement" />
+      <xsd:import schemaLocation="http://localhost:6082/LOLConnect.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LOLCodeLibrary.ErrorsManagement" />
+      <xsd:import schemaLocation="http://localhost:6082/LOLConnect.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:6082/LOLConnect.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/LOLAccountManagement.Classes.DtoObjects" />
+      <xsd:import schemaLocation="http://localhost:6082/LOLConnect.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/LOLAccountManagement.Classes" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="LOLConnect_AuthenticationTokenGet_InputMessage">
+    <wsdl:part name="parameters" element="AuthenticationTokenGet" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_AuthenticationTokenGet_OutputMessage">
+    <wsdl:part name="parameters" element="AuthenticationTokenGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_UserLogin_InputMessage">
+    <wsdl:part name="parameters" element="UserLogin" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_UserLogin_OutputMessage">
+    <wsdl:part name="parameters" element="UserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_UserCreate_InputMessage">
+    <wsdl:part name="parameters" element="UserCreate" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_UserCreate_OutputMessage">
+    <wsdl:part name="parameters" element="UserCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_UserGetSpecific_InputMessage">
+    <wsdl:part name="parameters" element="UserGetSpecific" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_UserGetSpecific_OutputMessage">
+    <wsdl:part name="parameters" element="UserGetSpecificResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_UserSave_InputMessage">
+    <wsdl:part name="parameters" element="UserSave" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_UserSave_OutputMessage">
+    <wsdl:part name="parameters" element="UserSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_UserLogOut_InputMessage">
+    <wsdl:part name="parameters" element="UserLogOut" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_UserLogOut_OutputMessage">
+    <wsdl:part name="parameters" element="UserLogOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_UserGetResetToken_InputMessage">
+    <wsdl:part name="parameters" element="UserGetResetToken" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_UserGetResetToken_OutputMessage">
+    <wsdl:part name="parameters" element="UserGetResetTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_UserPasswordReset_InputMessage">
+    <wsdl:part name="parameters" element="UserPasswordReset" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_UserPasswordReset_OutputMessage">
+    <wsdl:part name="parameters" element="UserPasswordResetResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_UserValidateResetToken_InputMessage">
+    <wsdl:part name="parameters" element="UserValidateResetToken" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_UserValidateResetToken_OutputMessage">
+    <wsdl:part name="parameters" element="UserValidateResetTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_AccountOAuthCreate_InputMessage">
+    <wsdl:part name="parameters" element="AccountOAuthCreate" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_AccountOAuthCreate_OutputMessage">
+    <wsdl:part name="parameters" element="AccountOAuthCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContactsGetUpdated_InputMessage">
+    <wsdl:part name="parameters" element="ContactsGetUpdated" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContactsGetUpdated_OutputMessage">
+    <wsdl:part name="parameters" element="ContactsGetUpdatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContactsSearchList_InputMessage">
+    <wsdl:part name="parameters" element="ContactsSearchList" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContactsSearchList_OutputMessage">
+    <wsdl:part name="parameters" element="ContactsSearchListResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContactsSearch_InputMessage">
+    <wsdl:part name="parameters" element="ContactsSearch" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContactsSearch_OutputMessage">
+    <wsdl:part name="parameters" element="ContactsSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContactsGetList_InputMessage">
+    <wsdl:part name="parameters" element="ContactsGetList" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContactsGetList_OutputMessage">
+    <wsdl:part name="parameters" element="ContactsGetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContactGet_InputMessage">
+    <wsdl:part name="parameters" element="ContactGet" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContactGet_OutputMessage">
+    <wsdl:part name="parameters" element="ContactGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContactsSave_InputMessage">
+    <wsdl:part name="parameters" element="ContactsSave" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContactsSave_OutputMessage">
+    <wsdl:part name="parameters" element="ContactsSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContactsSaveList_InputMessage">
+    <wsdl:part name="parameters" element="ContactsSaveList" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContactsSaveList_OutputMessage">
+    <wsdl:part name="parameters" element="ContactsSaveListResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContactsDelete_InputMessage">
+    <wsdl:part name="parameters" element="ContactsDelete" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContactsDelete_OutputMessage">
+    <wsdl:part name="parameters" element="ContactsDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContactsSendInviteEmail_InputMessage">
+    <wsdl:part name="parameters" element="ContactsSendInviteEmail" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContactsSendInviteEmail_OutputMessage">
+    <wsdl:part name="parameters" element="ContactsSendInviteEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContentPacksGetByTypeAndAccountID_InputMessage">
+    <wsdl:part name="parameters" element="ContentPacksGetByTypeAndAccountID" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContentPacksGetByTypeAndAccountID_OutputMessage">
+    <wsdl:part name="parameters" element="ContentPacksGetByTypeAndAccountIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContentPacksGetByType_InputMessage">
+    <wsdl:part name="parameters" element="ContentPacksGetByType" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContentPacksGetByType_OutputMessage">
+    <wsdl:part name="parameters" element="ContentPacksGetByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContentPackItemGetData_InputMessage">
+    <wsdl:part name="parameters" element="ContentPackItemGetData" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContentPackItemGetData_OutputMessage">
+    <wsdl:part name="parameters" element="ContentPackItemGetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContentPackGetPackItemsLight_InputMessage">
+    <wsdl:part name="parameters" element="ContentPackGetPackItemsLight" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContentPackGetPackItemsLight_OutputMessage">
+    <wsdl:part name="parameters" element="ContentPackGetPackItemsLightResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContentPackGetPackItems_InputMessage">
+    <wsdl:part name="parameters" element="ContentPackGetPackItems" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContentPackGetPackItems_OutputMessage">
+    <wsdl:part name="parameters" element="ContentPackGetPackItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContentPackGetItem_InputMessage">
+    <wsdl:part name="parameters" element="ContentPackGetItem" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContentPackGetItem_OutputMessage">
+    <wsdl:part name="parameters" element="ContentPackGetItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContentPackGetItemLight_InputMessage">
+    <wsdl:part name="parameters" element="ContentPackGetItemLight" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContentPackGetItemLight_OutputMessage">
+    <wsdl:part name="parameters" element="ContentPackGetItemLightResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContentPackGetItemIcon_InputMessage">
+    <wsdl:part name="parameters" element="ContentPackGetItemIcon" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_ContentPackGetItemIcon_OutputMessage">
+    <wsdl:part name="parameters" element="ContentPackGetItemIconResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_DeleteTestData_InputMessage">
+    <wsdl:part name="parameters" element="DeleteTestData" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_DeleteTestData_OutputMessage">
+    <wsdl:part name="parameters" element="DeleteTestDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_GetVersionNumber_InputMessage">
+    <wsdl:part name="parameters" element="GetVersionNumber" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_GetVersionNumber_OutputMessage">
+    <wsdl:part name="parameters" element="GetVersionNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_UserGetImageData_InputMessage">
+    <wsdl:part name="parameters" element="UserGetImageData" />
+  </wsdl:message>
+  <wsdl:message name="LOLConnect_UserGetImageData_OutputMessage">
+    <wsdl:part name="parameters" element="UserGetImageDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="LOLConnect">
+    <wsdl:operation name="AuthenticationTokenGet">
+      <wsdl:input wsaw:Action="urn:LOLConnect/AuthenticationTokenGet" message="LOLConnect_AuthenticationTokenGet_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/AuthenticationTokenGetResponse" message="LOLConnect_AuthenticationTokenGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserLogin">
+      <wsdl:input wsaw:Action="urn:LOLConnect/UserLogin" message="LOLConnect_UserLogin_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/UserLoginResponse" message="LOLConnect_UserLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserCreate">
+      <wsdl:input wsaw:Action="urn:LOLConnect/UserCreate" message="LOLConnect_UserCreate_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/UserCreateResponse" message="LOLConnect_UserCreate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserGetSpecific">
+      <wsdl:input wsaw:Action="urn:LOLConnect/UserGetSpecific" message="LOLConnect_UserGetSpecific_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/UserGetSpecificResponse" message="LOLConnect_UserGetSpecific_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserSave">
+      <wsdl:input wsaw:Action="urn:LOLConnect/UserSave" message="LOLConnect_UserSave_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/UserSaveResponse" message="LOLConnect_UserSave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserLogOut">
+      <wsdl:input wsaw:Action="urn:LOLConnect/UserLogOut" message="LOLConnect_UserLogOut_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/UserLogOutResponse" message="LOLConnect_UserLogOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserGetResetToken">
+      <wsdl:input wsaw:Action="urn:LOLConnect/UserGetResetToken" message="LOLConnect_UserGetResetToken_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/UserGetResetTokenResponse" message="LOLConnect_UserGetResetToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserPasswordReset">
+      <wsdl:input wsaw:Action="urn:LOLConnect/UserPasswordReset" message="LOLConnect_UserPasswordReset_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/UserPasswordResetResponse" message="LOLConnect_UserPasswordReset_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserValidateResetToken">
+      <wsdl:input wsaw:Action="urn:LOLConnect/UserValidateResetToken" message="LOLConnect_UserValidateResetToken_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/UserValidateResetTokenResponse" message="LOLConnect_UserValidateResetToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountOAuthCreate">
+      <wsdl:input wsaw:Action="urn:LOLConnect/AccountOAuthCreate" message="LOLConnect_AccountOAuthCreate_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/AccountOAuthCreateResponse" message="LOLConnect_AccountOAuthCreate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContactsGetUpdated">
+      <wsdl:input wsaw:Action="urn:LOLConnect/ContactsGetUpdated" message="LOLConnect_ContactsGetUpdated_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/ContactsGetUpdatedResponse" message="LOLConnect_ContactsGetUpdated_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContactsSearchList">
+      <wsdl:input wsaw:Action="urn:LOLConnect/ContactsSearchList" message="LOLConnect_ContactsSearchList_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/ContactsSearchListResponse" message="LOLConnect_ContactsSearchList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContactsSearch">
+      <wsdl:input wsaw:Action="urn:LOLConnect/ContactsSearch" message="LOLConnect_ContactsSearch_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/ContactsSearchResponse" message="LOLConnect_ContactsSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContactsGetList">
+      <wsdl:input wsaw:Action="urn:LOLConnect/ContactsGetList" message="LOLConnect_ContactsGetList_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/ContactsGetListResponse" message="LOLConnect_ContactsGetList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContactGet">
+      <wsdl:input wsaw:Action="urn:LOLConnect/ContactGet" message="LOLConnect_ContactGet_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/ContactGetResponse" message="LOLConnect_ContactGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContactsSave">
+      <wsdl:input wsaw:Action="urn:LOLConnect/ContactsSave" message="LOLConnect_ContactsSave_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/ContactsSaveResponse" message="LOLConnect_ContactsSave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContactsSaveList">
+      <wsdl:input wsaw:Action="urn:LOLConnect/ContactsSaveList" message="LOLConnect_ContactsSaveList_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/ContactsSaveListResponse" message="LOLConnect_ContactsSaveList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContactsDelete">
+      <wsdl:input wsaw:Action="urn:LOLConnect/ContactsDelete" message="LOLConnect_ContactsDelete_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/ContactsDeleteResponse" message="LOLConnect_ContactsDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContactsSendInviteEmail">
+      <wsdl:input wsaw:Action="urn:LOLConnect/ContactsSendInviteEmail" message="LOLConnect_ContactsSendInviteEmail_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/ContactsSendInviteEmailResponse" message="LOLConnect_ContactsSendInviteEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContentPacksGetByTypeAndAccountID">
+      <wsdl:input wsaw:Action="urn:LOLConnect/ContentPacksGetByTypeAndAccountID" message="LOLConnect_ContentPacksGetByTypeAndAccountID_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/ContentPacksGetByTypeAndAccountIDResponse" message="LOLConnect_ContentPacksGetByTypeAndAccountID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContentPacksGetByType">
+      <wsdl:input wsaw:Action="urn:LOLConnect/ContentPacksGetByType" message="LOLConnect_ContentPacksGetByType_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/ContentPacksGetByTypeResponse" message="LOLConnect_ContentPacksGetByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContentPackItemGetData">
+      <wsdl:input wsaw:Action="urn:LOLConnect/ContentPackItemGetData" message="LOLConnect_ContentPackItemGetData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/ContentPackItemGetDataResponse" message="LOLConnect_ContentPackItemGetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContentPackGetPackItemsLight">
+      <wsdl:input wsaw:Action="urn:LOLConnect/ContentPackGetPackItemsLight" message="LOLConnect_ContentPackGetPackItemsLight_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/ContentPackGetPackItemsLightResponse" message="LOLConnect_ContentPackGetPackItemsLight_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContentPackGetPackItems">
+      <wsdl:input wsaw:Action="urn:LOLConnect/ContentPackGetPackItems" message="LOLConnect_ContentPackGetPackItems_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/ContentPackGetPackItemsResponse" message="LOLConnect_ContentPackGetPackItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContentPackGetItem">
+      <wsdl:input wsaw:Action="urn:LOLConnect/ContentPackGetItem" message="LOLConnect_ContentPackGetItem_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/ContentPackGetItemResponse" message="LOLConnect_ContentPackGetItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContentPackGetItemLight">
+      <wsdl:input wsaw:Action="urn:LOLConnect/ContentPackGetItemLight" message="LOLConnect_ContentPackGetItemLight_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/ContentPackGetItemLightResponse" message="LOLConnect_ContentPackGetItemLight_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContentPackGetItemIcon">
+      <wsdl:input wsaw:Action="urn:LOLConnect/ContentPackGetItemIcon" message="LOLConnect_ContentPackGetItemIcon_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/ContentPackGetItemIconResponse" message="LOLConnect_ContentPackGetItemIcon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTestData">
+      <wsdl:input wsaw:Action="urn:LOLConnect/DeleteTestData" message="LOLConnect_DeleteTestData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/DeleteTestDataResponse" message="LOLConnect_DeleteTestData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersionNumber">
+      <wsdl:input wsaw:Action="urn:LOLConnect/GetVersionNumber" message="LOLConnect_GetVersionNumber_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/GetVersionNumberResponse" message="LOLConnect_GetVersionNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserGetImageData">
+      <wsdl:input wsaw:Action="urn:LOLConnect/UserGetImageData" message="LOLConnect_UserGetImageData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLConnect/UserGetImageDataResponse" message="LOLConnect_UserGetImageData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
